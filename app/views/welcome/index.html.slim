@@ -1,0 +1,104 @@
+.container
+  h2 合同勉強会 2016 Winter 用サンプル
+
+  h3 デザインされたチェックボックス
+
+  section
+    - @songs.each_with_index do |song, index|
+      .checkbox
+        label
+          input type="checkbox" value=(index)
+          =" #{song}"
+
+  section.form-checkbox
+    - @songs.each_with_index do |song, index|
+      div
+        input type="checkbox" id="song#{index}"
+        label for="song#{index}" = song
+
+  section
+    - @aqours.each do |name|
+      .radio
+        label
+          input type="radio" name="second" value=(name)
+          = " #{name}"
+
+  section.form-radio
+    - @aqours.each_with_index do |name, index|
+      .radio
+        input type="radio" name="first" value=(name) id="member#{index}"
+        label for="member#{index}"
+          = " #{name}"
+
+
+  h3 flexbox
+
+  h4 justify-content
+
+  section
+    dl
+      dt flex-start
+      dd
+        ul.flex1
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt space-between
+      dd
+        ul.flex2
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt center
+      dd
+        ul.flex3
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt space-around
+      dd
+        ul.flex4
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt flex-end
+      dd
+        ul.flex5
+          li 要素1
+          li 要素2
+          li 要素3
+
+
+    dl
+      dt stretch
+      dd
+        ul.flex6
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt flex-start
+      dd
+        ul.flex7
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt center
+      dd
+        ul.flex8
+          li 要素1
+          li 要素2
+          li 要素3
+
+      dt flex-end
+      dd
+        ul.flex9
+          li 要素1
+          li 要素2
+          li 要素3
+

@@ -1,0 +1,82 @@
+.form-checkbox {
+  input[type='checkbox'] {
+    display: none;
+
+    &:checked + label:after {
+      position: absolute;
+      display: block;
+      left: 3px;
+      top: 1px;
+      font-family: FontAwesome;
+      content: '\f00c';
+      color: $green;
+    }
+  }
+
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-weight: normal;
+
+    &:hover:before {
+      border-color: $green;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 2px solid darken(#ddd, 15%);
+      border-radius: 3px;
+      background: #ddd;
+      transition: border-color 0.2s linear
+    }
+  }
+}
+
+.form-radio {
+  input[type='radio'] {
+    display: none;
+
+    &:checked + label:after {
+      position: absolute;
+      display: block;
+      left: 5px;
+      top: 2px;
+      font-size: 0.9em;
+      font-family: FontAwesome;
+      content: '\f111';
+      color: $green;
+    }
+  }
+
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-weight: normal;
+
+    &:hover:before {
+      border-color: $green;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 2px solid darken(#ddd, 15%);
+      border-radius: 20px;
+      background: #ddd;
+      transition: border-color 0.2s linear
+    }
+  }
+}
